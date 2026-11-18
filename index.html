@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AnySharePro • High Speed Offline File Transfer</title>
-  <meta name="description" content="AnySharePro - Ultra-Fast, Offline Peer-to-Peer file sharing utility. Zero cloud uploads, zero quality loss.">
+  <title>AnySharePro • Legal, Privacy Policy & Terms of Service</title>
+  <meta name="description" content="Official Legal Portal for AnySharePro - Privacy Policy, Terms of Service, and User Support. 100% Zero-Cloud Offline Peer-to-Peer File Transfer.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
   <style>
     :root {
       --bg: #0b0914;
@@ -15,30 +16,40 @@
       --accent-secondary: #06b6d4;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
+      --tag-bg: rgba(168, 85, 247, 0.12);
+      --tag-border: rgba(168, 85, 247, 0.3);
     }
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--text-main);
       line-height: 1.7;
-      padding: 24px 16px 60px;
+      padding: 20px 16px 80px;
     }
     .container {
-      max-width: 840px;
+      max-width: 860px;
       margin: 0 auto;
     }
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 16px 0 32px;
+      padding: 16px 0 24px;
       border-bottom: 1px solid var(--card-border);
-      margin-bottom: 32px;
+      position: sticky;
+      top: 0;
+      background: rgba(11, 9, 20, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 100;
     }
     .brand {
       display: flex;
@@ -66,138 +77,357 @@
     }
     .nav-links {
       display: flex;
-      gap: 16px;
+      gap: 10px;
+      flex-wrap: wrap;
     }
-    .nav-links a {
-      color: var(--text-muted);
+    .nav-btn {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
       text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
-      transition: color 0.2s;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 7px 14px;
+      border-radius: 20px;
+      transition: all 0.2s ease;
     }
-    .nav-links a:hover, .nav-links a.active {
+    .nav-btn:hover {
+      background: var(--tag-bg);
+      border-color: var(--accent);
       color: var(--accent);
+      transform: translateY(-1px);
     }
     .hero {
       text-align: center;
-      padding: 40px 20px 50px;
+      padding: 44px 16px 36px;
     }
     .badge {
       display: inline-block;
       padding: 5px 14px;
       border-radius: 999px;
-      background: rgba(168, 85, 247, 0.12);
-      border: 1px solid rgba(168, 85, 247, 0.3);
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
       color: var(--accent);
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.6px;
       margin-bottom: 16px;
     }
     h1 {
-      font-size: 42px;
+      font-size: 36px;
       font-weight: 900;
-      letter-spacing: -1.5px;
-      margin-bottom: 16px;
-      line-height: 1.15;
-      background: linear-gradient(135deg, #ffffff, #c084fc, #06b6d4);
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #ffffff 40%, #c084fc 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .subtitle {
-      font-size: 18px;
+    .hero-sub {
+      font-size: 16px;
       color: var(--text-muted);
       max-width: 600px;
-      margin: 0 auto 36px;
+      margin: 0 auto;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-      margin-bottom: 40px;
-    }
-    .card {
+    .legal-card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
-      border-radius: 18px;
-      padding: 24px;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.2s, border-color 0.2s;
+      border-radius: 24px;
+      padding: 36px 32px;
+      margin-bottom: 40px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+      scroll-margin-top: 100px;
     }
-    .card:hover {
-      transform: translateY(-3px);
-      border-color: var(--accent);
+    .section-header {
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 20px;
+      margin-bottom: 28px;
     }
-    .card-icon {
+    .section-title {
       font-size: 28px;
-      margin-bottom: 12px;
-    }
-    .card h3 {
-      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
       margin-bottom: 6px;
-      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #ffffff;
     }
-    .card p {
+    .meta-info {
       font-size: 13px;
       color: var(--text-muted);
+      font-weight: 500;
+    }
+    .summary-box {
+      background: rgba(168, 85, 247, 0.08);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 14px 14px 0;
+      padding: 18px 22px;
+      margin: 20px 0 28px;
+    }
+    .summary-box h3 {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .summary-box p {
+      font-size: 14px;
+      color: #cbd5e1;
       line-height: 1.6;
+      margin: 0;
+    }
+    h2 {
+      font-size: 19px;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 28px 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    p, li {
+      font-size: 15px;
+      color: #cbd5e1;
+      margin-bottom: 12px;
+    }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    strong {
+      color: #ffffff;
+    }
+    .faq-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-bottom: 14px;
+    }
+    .faq-q {
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+    .faq-a {
+      font-size: 14px;
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+    .contact-card {
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.12), rgba(6, 182, 212, 0.08));
+      border: 1px solid var(--accent);
+      border-radius: 18px;
+      padding: 24px;
+      margin-top: 24px;
+      text-align: center;
+    }
+    .contact-card h3 {
+      font-size: 18px;
+      margin-bottom: 6px;
+      color: #ffffff;
+    }
+    .contact-card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 16px;
     }
     footer {
       text-align: center;
-      padding: 36px 0 16px;
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--card-border);
       color: var(--text-muted);
       font-size: 13px;
-      border-top: 1px solid var(--card-border);
+    }
+    @media (max-width: 640px) {
+      .legal-card {
+        padding: 24px 18px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      .section-title {
+        font-size: 23px;
+      }
+      header {
+        flex-direction: column;
+        gap: 14px;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <a href="index.html" class="brand">
+      <a href="#top" class="brand">
         <div class="brand-icon">⚡</div>
-        <span class="brand-name">AnySharePro</span>
+        <div class="brand-name">AnySharePro</div>
       </a>
       <nav class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="support.html">Support</a>
+        <a href="#privacy" class="nav-btn">🛡️ Privacy Policy</a>
+        <a href="#terms" class="nav-btn">📜 Terms of Service</a>
+        <a href="#support" class="nav-btn">💬 Support & FAQ</a>
       </nav>
     </header>
 
-    <div class="hero">
-      <span class="badge">Official Legal & Support Portal</span>
-      <h1>Fast, Private & Offline File Transfer</h1>
-      <p class="subtitle">
-        AnySharePro moves large files, uncompressed 4K videos, photos, and documents between devices at full hardware Wi-Fi speeds without internet or cloud storage.
+    <div class="hero" id="top">
+      <div class="badge">Official Legal & Trust Portal</div>
+      <h1>Legal Documentation</h1>
+      <p class="hero-sub">
+        Transparency, zero data collection, and direct offline peer-to-peer security principles governing AnySharePro.
       </p>
     </div>
 
-    <div class="grid">
-      <a href="privacy.html" class="card">
-        <div class="card-icon">🛡️</div>
-        <h3>Privacy Policy</h3>
-        <p>100% Zero-Log architecture. Read about our zero cloud uploads, on-device data retention, and permission safety.</p>
-      </a>
+    <!-- ========================================== -->
+    <!-- SECTION 1: PRIVACY POLICY                  -->
+    <!-- ========================================== -->
+    <article class="legal-card" id="privacy">
+      <div class="section-header">
+        <div class="badge">Data Protection & Privacy</div>
+        <h2 class="section-title">🛡️ Privacy Policy</h2>
+        <div class="meta-info">
+          Last Updated: November 2026 • Effective Date: November 1, 2026 • Version 1.0.0
+        </div>
+      </div>
 
-      <a href="terms.html" class="card">
-        <div class="card-icon">📜</div>
-        <h3>Terms of Service</h3>
-        <p>End User License Agreement (EULA), neutral conduit policy, acceptable use, and warranty disclaimer.</p>
-      </a>
+      <div class="summary-box">
+        <h3>Summary: 100% Zero Data Collection Policy</h3>
+        <p>
+          AnySharePro is engineered with privacy as a foundational principle. <strong>We do not collect, process, log, track, or share any personal information or file data.</strong> All file transfers occur strictly peer-to-peer across your private local Wi-Fi or device hotspot. No files or metadata ever pass through or touch remote cloud servers.
+        </p>
+      </div>
 
-      <a href="support.html" class="card">
-        <div class="card-icon">💬</div>
-        <h3>App Support</h3>
-        <p>Frequently Asked Questions, troubleshooting for hotspot/firewalls, and direct developer contact.</p>
-      </a>
-    </div>
+      <h2>1. Information We Do Not Collect</h2>
+      <p>Because AnySharePro works 100% offline via direct device-to-device sockets, we operate with a strict zero-knowledge architecture:</p>
+      <ul>
+        <li><strong>No Personal Identifiers:</strong> We do not require account registration, login, email addresses, phone numbers, or passwords.</li>
+        <li><strong>No File or Content Tracking:</strong> The files, photos, videos, and documents you send are streamed directly to the recipient over local TCP sockets. We have zero visibility into your file names, sizes, or contents.</li>
+        <li><strong>No Analytics or Tracking SDKs:</strong> There are no advertising identifiers, third-party analytics trackers, or user telemetry libraries embedded in the application.</li>
+        <li><strong>No Transfer Logs:</strong> Session data, device pairings, and transfer progress reside purely in temporary device RAM and are cleared upon app close.</li>
+      </ul>
+
+      <h2>2. Device Permissions & Why They Are Needed</h2>
+      <p>AnySharePro requests only the minimum iOS/Android system permissions required to establish local connections and select files you wish to send:</p>
+      <ul>
+        <li><strong>Camera:</strong> Used exclusively to scan device-pairing QR codes. Camera video frames are processed in real-time on your device using native Apple Vision / Barcode scanner APIs and are never recorded or stored.</li>
+        <li><strong>Photo Library & Files:</strong> Accessed only when you explicitly select photos, videos, or documents to send, or choose to save received media into your device's Camera Roll.</li>
+        <li><strong>Local Network (iOS):</strong> Required by iOS to broadcast and listen on local network sockets (port 8080) for discovery and high-speed data transmission between devices connected to the same Wi-Fi or Personal Hotspot.</li>
+      </ul>
+
+      <h2>3. End-to-End Cryptography & Data Integrity</h2>
+      <p>
+        Every direct transfer session generates an ephemeral session token exchanged during the QR pairing handshake. Binary chunks are verified using hardware-accelerated SHA-256 cryptographic checksums, guaranteeing that your files are transmitted without packet alteration or corruption.
+      </p>
+
+      <h2>4. Third-Party Services & Links</h2>
+      <p>
+        AnySharePro does not bundle third-party ad networks, social logins, or behavioral tracking SDKs. Any external links in this documentation point exclusively to this official GitHub-hosted repository for user reference.
+      </p>
+
+      <h2>5. Children's Privacy (COPPA Compliance)</h2>
+      <p>
+        AnySharePro does not collect personal information from any user, including children under the age of 13. The application is completely safe for all audiences.
+      </p>
+    </article>
+
+    <!-- ========================================== -->
+    <!-- SECTION 2: TERMS OF SERVICE                -->
+    <!-- ========================================== -->
+    <article class="legal-card" id="terms">
+      <div class="section-header">
+        <div class="badge">Legal Agreement</div>
+        <h2 class="section-title">📜 Terms of Service</h2>
+        <div class="meta-info">
+          Last Updated: November 2026 • Effective Date: November 1, 2026 • Version 1.0.0
+        </div>
+      </div>
+
+      <div class="summary-box">
+        <h3>Summary: Neutral Local Conduit</h3>
+        <p>
+          By downloading, installing, or using <strong>AnySharePro</strong>, you agree to these Terms of Service. AnySharePro acts solely as a local software conduit to facilitate wireless transfers between your own devices.
+        </p>
+      </div>
+
+      <h2>1. License & Permitted Use</h2>
+      <p>
+        Subject to your compliance with these Terms, AnySharePro grants you a personal, non-exclusive, non-transferable, revocable license to use the application on devices you own or control for personal, non-commercial, or internal productivity purposes.
+      </p>
+
+      <h2>2. User Responsibility & File Ownership</h2>
+      <p>Because AnySharePro transmits files directly between peers without server intermediation:</p>
+      <ul>
+        <li>You retain full ownership and responsibility for any files, documents, photos, or data you transfer.</li>
+        <li>You warrant that you own or have obtained the necessary legal licenses and permissions for all content you distribute.</li>
+        <li>You agree not to use AnySharePro to transfer malicious code, malware, viruses, illegal material, or content that infringes upon third-party copyrights or intellectual property rights.</li>
+      </ul>
+
+      <h2>3. Disclaimer of Warranties ("AS-IS")</h2>
+      <p>
+        AnySharePro is provided on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis without warranties of any kind, whether express or implied. Transfer speeds, network stability, and connection success depend entirely on your local wireless environment, router configuration, device hardware, and OS permission grants.
+      </p>
+
+      <h2>4. Limitation of Liability</h2>
+      <p>
+        To the fullest extent permitted by applicable law, the developers, contributors, and distributors of AnySharePro shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of data, loss of business, or device hardware damage resulting from uninterrupted or interrupted wireless file transfer.
+      </p>
+
+      <h2>5. Apple App Store Terms</h2>
+      <p>
+        If downloaded via the Apple App Store, you acknowledge that these Terms are between you and AnySharePro, not Apple Inc. Apple is not responsible for the software, its maintenance, or user support.
+      </p>
+    </article>
+
+    <!-- ========================================== -->
+    <!-- SECTION 3: SUPPORT & FAQ                   -->
+    <!-- ========================================== -->
+    <article class="legal-card" id="support">
+      <div class="section-header">
+        <div class="badge">Assistance & FAQ</div>
+        <h2 class="section-title">💬 Support & FAQ</h2>
+        <div class="meta-info">
+          Direct Developer Support & Troubleshooting Resources
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q: Does AnySharePro require an active Internet connection?</div>
+        <div class="faq-a">
+          No. AnySharePro operates 100% offline using your local Wi-Fi network or Personal Hotspot. Your mobile data or internet bandwidth is never consumed.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q: How do I connect an Android phone or PC to an iPhone?</div>
+        <div class="faq-a">
+          Connect both devices to the same Wi-Fi router or turn on the iPhone's Personal Hotspot. Open AnySharePro, tap Send, and scan the displayed QR code with your Android phone's camera or browser.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q: Why does iOS ask for "Local Network" permission?</div>
+        <div class="faq-a">
+          iOS requires explicit user consent for apps to establish direct socket connections (HTTP/TCP) with other devices on your home or office Wi-Fi network.
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <h3>Need Further Assistance or Have Inquiries?</h3>
+        <p style="margin-bottom: 12px; color: #cbd5e1;">Contact our developer support team directly:</p>
+        <a href="mailto:saurabhsudan051@gmail.com">✉️ saurabhsudan051@gmail.com</a>
+      </div>
+    </article>
 
     <footer>
-      <p>&copy; 2026 AnySharePro • Developed by Saurabh Kumar Sharma • All Rights Reserved.</p>
+      <p>© 2026 AnySharePro. All rights reserved. 100% Offline Local File Sharing Utility.</p>
     </footer>
   </div>
 </body>
